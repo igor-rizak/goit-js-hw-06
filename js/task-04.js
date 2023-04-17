@@ -9,19 +9,17 @@ const refs = {
 
 refs.onClickButtonMin.addEventListener("click", onTargetButtonClickMin);
 
-function onTargetButtonClickMin(event) {
-    if (event) {
-        counterValue -= 1;
-        refs.valueSpan.textContent = counterValue;
-    }
+function onTargetButtonClickMin() {
+    counterValue -= 1;
+    refs.valueSpan.textContent = counterValue;
+    
 }
 
 refs.onClickButtonMax.addEventListener("click", onTargetButtonClickMax);
 
-function onTargetButtonClickMax(event) {
-    if (event) {
-        counterValue += 1;
-        refs.valueSpan.textContent = counterValue;
-    }
+function onTargetButtonClickMax() {
+    counterValue += 1;
+    refs.valueSpan.textContent = counterValue;
+    
 }
 

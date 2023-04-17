@@ -1,11 +1,10 @@
 let input = document.getElementById("name-input");
-let nameOutput = document.getElementById("name-output");
+let output = document.getElementById("name-output");
 
+input.addEventListener('input', onInputChange);
 
-input.oninput = function () {
-    if (input.value === '') {
-       nameOutput.innerHTML = "Anonymous";
-    } else{
-    nameOutput.innerHTML = input.value;
-    }
+function onInputChange(event) {
+    const inputValue = event.target.value.trim();
+    output.textContent = inputValue ? inputValue : "Anonymous";
 }
+

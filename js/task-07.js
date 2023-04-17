@@ -1,6 +1,7 @@
-const getInput = document.querySelector('#font-size-control');
+const getInput = document.getElementById('font-size-control');
+const getSpan = document.getElementById('text');
 
-const getSpan = document.querySelector('#text');
+getSpan.style.fontSize = `${getInput.value}px`
 
 getInput.addEventListener('input', onChangeIntut);
 

@@ -7,24 +7,12 @@ const ingredients = [
   'Condiments',
 ];
 
-const listElements = document.querySelector('#ingredients');
-
-  
-for (let i = 0; i < ingredients.length; i++) {
-  
-  const newElement = document.createElement('li');
-  
-  newElement.textContent = ingredients[i];
-  newElement.classList.add('item');
-  listElements.insertAdjacentElement('beforeend', newElement)
-
-}
+const listElements = document.getElementById('ingredients');
 
 
+const markup = [...ingredients]
+  .map((ingredient) => `<li class="item">${ingredient}</li>`)
+  .join('');
 
-// const murkup = ingredients.map((ingredient) => `<li class = "item">${ingredient}</li>`).join('');
-
-// murkup.insertAdjacentHTML("beforeend", markup);
-
-
+  listElements.innerHTML = markup;
 
