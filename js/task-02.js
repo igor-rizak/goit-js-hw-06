@@ -10,9 +10,13 @@ const ingredients = [
 const listElements = document.getElementById('ingredients');
 
 
-const markup = [...ingredients]
-  .map((ingredient) => `<li class="item">${ingredient}</li>`)
-  .join('');
+const markup = ingredients.forEach(ingredient => {
+  let items = document.createElement('li');
+  items.classList.add = 'item'
+  items.textContent = `${ingredient}`
+  listElements.append(items);
+})
 
-  listElements.append = markup;
+console.log(listElements)
+
 
